@@ -1,0 +1,27 @@
+services:
+  AtmCard:
+    image: vigzbhat1803/atmcard
+    ports:
+      - "8082:8082"
+    networks:
+      - bank-network
+  AccountTest:
+    image: vigzbhat1803/accounttest
+    ports:
+      - "8081:8081"
+    networks:
+      - bank-network
+  Loan:
+    image: vigzbhat1803/loan
+    ports:
+      - "8083:8083"   
+    networks:
+      - bank-network
+  Insurance:
+    image: vigzbhat1803/insurance
+    ports:
+      - "8084:8084"
+    networks:
+      - bank-network
+networks:
+  bank-network: {}
